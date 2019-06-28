@@ -74,7 +74,7 @@ int send_request(int fd, char *hostname, char *port, char *path)
   int rv;
 
   int rl = sprintf(request,
-    "GET %s HTTP/1.1\nHost: %s:%s\nConnection: close",
+    "GET /%s HTTP/1.1\nHost: %s:%s\nConnection: close\n\n",
     path, hostname, port
   );
 
